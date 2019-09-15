@@ -47,13 +47,13 @@ public class WeatherService {
 						user.getAccessAPIId());
 				weatherAPIResponses.add(parseWeatherResponse(weatherResponse));
 				weatherAPIResponses.addAll(weatherDAO.getWeatherByFilter(weatherRequest.getCity(),
-						weatherRequest.getFromDate(), new Date(weatherRequest.getToDate().getTime() - 86400000)));
+						weatherRequest.getFromDate(), currentDate));
 			} else {
 				weatherAPIResponses.addAll(weatherDAO.getWeatherByFilter(weatherRequest.getCity(),
 						weatherRequest.getFromDate(), weatherRequest.getToDate()));
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			
 		}
 		return weatherAPIResponses;
 	}
@@ -67,7 +67,8 @@ public class WeatherService {
 		weatherAPIResponse.setTemprature("" + (weatherResponse.getMain().getTemp() - 273));
 		weatherAPIResponse.setHumidity("" + weatherResponse.getMain().getHumidity());
 		weatherAPIResponse.setWeather("" + weatherResponse.getWeather().get(0).getMain());
-		weatherAPIResponse.setTime(new Date(weatherResponse.getDt()));
+		long timeStamp = Long.parseLong("" + weatherResponse.getDt()) * Long.parseLong("" + 1000);
+		weatherAPIResponse.setTime(new Date(timeStamp));
 		weatherAPIResponse.setCountryCode("" + weatherResponse.getSys().getCountry());
 		weatherAPIResponse.setLocation("" + weatherResponse.getName());
 		return weatherAPIResponse;
