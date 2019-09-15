@@ -16,11 +16,11 @@ import org.springframework.stereotype.Component;
 public class WeatherServiceAspect {
 	@Before(value = "execution(* com.concretio.service.WeatherService.*(..)) || execution(* com.concretio.controller.WeatherController.*(..))")
 	public void beforeAdvice(JoinPoint joinPoint) {
-		System.out.println("Entering Method " + joinPoint.getSignature());
+		System.out.println("Entering Method " + joinPoint.toLongString());
 	}
 
 	@After(value = "execution(* com.concretio.service.WeatherService.*(..)) || execution(* com.concretio.controller.WeatherController.*(..))")
 	public void afterAdvice(JoinPoint joinPoint) {
-		System.out.println("Exiting Method " + joinPoint.getSignature());
+		System.out.println("Exiting Method " + joinPoint.toLongString());
 	}
 }
