@@ -20,6 +20,11 @@ import com.concretio.service.WeatherService;
 
 @RestController
 public class WeatherController {
+	
+	/*
+	 * Create by Akash Chaturvedi
+	 * Controller class to handle application related requests   
+	 */
 
 	@Autowired
 	JwtTokenUtil jwtTokenUtil;

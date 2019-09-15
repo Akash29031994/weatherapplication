@@ -19,6 +19,12 @@ import com.concretio.service.JwtUserDetailsService;
 
 import io.jsonwebtoken.ExpiredJwtException;
 
+/*
+ * Create by Akash Chaturvedi
+ * Filter the request which are not by-passed and look for valid JWT token.
+ * Provides the valid JWT token to the request authenticating the user by verifying username and password.   
+ */
+
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
 

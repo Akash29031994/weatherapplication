@@ -21,7 +21,12 @@ private final Logger log = LoggerFactory.getLogger(CORSFilter.class);
 public CORSFilter() {
     log.info("SimpleCORSFilter init");
 }
-
+/*
+ * Create by Akash Chaturvedi
+ * To handle Cross-Origin Resource Sharing(CORS)
+ * Allow specific headers(Allowing all in this case)
+ * Allow specific requests from specific origin(Allowing all in this case)  
+ * */
 @SuppressWarnings("unused")
 @Override
 public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {

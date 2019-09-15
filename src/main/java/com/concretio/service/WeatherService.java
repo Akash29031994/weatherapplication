@@ -20,6 +20,12 @@ import com.concretio.model.User;
 import com.concretio.model.Weather;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/*
+ * Create by Akash Chaturvedi
+ * Service class to weather application
+ * Includes business logic to handle the request and return the parsed response.   
+ */
+
 @Service
 public class WeatherService {
 

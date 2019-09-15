@@ -5,6 +5,10 @@ import java.io.Serializable;
 import lombok.Getter;
 import lombok.Setter;
 
+/*
+ * Create by Akash Chaturvedi   
+ */
+
 @Getter()
 @Setter()
 public class JwtRequest implements Serializable {

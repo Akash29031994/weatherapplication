@@ -9,6 +9,11 @@ import org.springframework.stereotype.Repository;
 
 import com.concretio.model.Weather;
 
+/*
+ * Create by Akash Chaturvedi
+ * Creating config for Swagger for API Documentation   
+ */
+
 @Repository
 public interface WeatherDAO extends CrudRepository<Weather, Integer>  {
 	@Query("select w from Weather w where w.location = ?1 and w.time between ?2 and ?3 order by w.time desc")

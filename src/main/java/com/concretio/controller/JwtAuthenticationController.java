@@ -21,6 +21,11 @@ import com.concretio.dto.JwtRequest;
 import com.concretio.dto.JwtResponse;
 import com.concretio.model.User;
 
+/*
+ * Create by Akash Chaturvedi
+ * Controller class to handle user authentication and creation.   
+ */
+
 @RestController
 public class JwtAuthenticationController {
 

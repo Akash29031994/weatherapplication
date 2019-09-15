@@ -12,6 +12,11 @@ import org.springframework.stereotype.Service;
 
 import com.concretio.dao.UserDao;
 
+/*
+ * Create by Akash Chaturvedi
+ * Service class to JWT requests to access Dao and check for the details of the user.
+ */
+
 @Service
 public class JwtUserDetailsService implements UserDetailsService {
 	
